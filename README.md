@@ -3,7 +3,7 @@
 This repository hold the concept for the DevOps Project and the Provisioning Code for the Terraform.
 
 # Overview
-![Prototype_v3](https://user-images.githubusercontent.com/57735112/146020346-144c778f-59c3-49ea-932f-c11da39e570a.png)
+![prototype_v4](https://user-images.githubusercontent.com/57735112/146023498-3d8aa2fc-805f-4b5d-9f2f-09aec209bb2f.png)
 
 The inspiration comes from [Multi-Cloud: managed [remote]](https://github.com/lucendio/lecture-devops-infos/blob/main/guide/examples.md) with some slight modification on the logging / monitoring.
 
