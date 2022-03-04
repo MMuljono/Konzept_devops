@@ -21,6 +21,7 @@ Deploying the application:
 Deploying Ingress:
   > cd ../ingress && kubectl create ns ingress-nginx \
   > helm install myingress ingress-nginx/ingress-nginx -n ingress-nginx --values deploy.yaml
+  > kubectl create -f ingress.yaml 
 
 Create TLS for Ingress:
   > openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=${YOUR_DOMAIN_NAME}" \
