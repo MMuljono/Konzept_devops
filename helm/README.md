@@ -24,4 +24,4 @@ Deploying Ingress:
 
 Create TLS for Ingress:
   > openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls.key -out tls.crt -subj "/CN=${YOUR_DOMAIN_NAME}" \
-  > kubectl create secret tls ${YOUR_SECRET_NAME_MUST_MATCH_WITH_INGRESS} --cert=./tls/tls.crt --key=./tls/tls.key 
+  > kubectl create secret tls ${YOUR_SECRET_NAME_MUST_MATCH_WITH_INGRESS} --cert=./tls.crt --key=./tls.key 
