@@ -1,6 +1,9 @@
 ## Prerequisites
   - Git clone kubespray to this folder [Github_URL](https://github.com/kubernetes-sigs/kubespray)
   - create SSH Key pair for connecting to EC2
+    > mkdir -p ./.ssh \
+      ssh-keygen -t rsa -b 4096 -C "operator" -N "" -f ./.ssh/operator \
+      chmod 600 ./.ssh/operator*
   
 ## Disclaimer 
   - This provisioning of Terraform and Kubespray is modified version from [tutorial-10](https://github.com/lucendio/lecture-devops-code/tree/master/tutorials/10_provision-kubernetes)
