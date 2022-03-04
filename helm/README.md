@@ -20,7 +20,7 @@ Deploying the application:
 
 Deploying Ingress:
   > cd ../ingress && kubectl create ns ingress-nginx \
-  > helm install myingress ingress-nginx/ingress-nginx -n ingress-nginx --values deploy.yaml
+  > helm install myingress ingress-nginx/ingress-nginx -n ingress-nginx --values deploy.yaml \
   > kubectl create -f ingress.yaml 
 
 Create TLS for Ingress:
