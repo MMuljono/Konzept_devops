@@ -1,0 +1,42 @@
+---
+volumeClaimTemplate:
+  accessModes: [ "ReadWriteOnce" ]
+  storageClassName: "manual"
+  volumeName: data-logging-pv0
+  resources:
+    requests:
+      storage: 2Gi
+
+podSecurityContext:
+  fsGroup: 1000
+
+esJavaOpts: "-Xmx1g -Xms1g"
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "1G"
+  limits:
+    cpu: "1000m"
+    memory: "2G"
+
+replicas: 1
+minimumMasterNodes: 1
+clusterHealthCheckParams: 'wait_for_status=yellow&timeout=1s'
+
+image: "docker.elastic.co/elasticsearch/elasticsearch"
+imageTag: "7.17.1"
+imagePullPolicy: "IfNotPresent"
+
+extraInitContainers: |
+   - name: file-permissions
+     image: busybox:1.28
+     command: ['chown', '-R', '1000:1000', '/usr/share/elasticsearch/']
+     securityContext:
+        runAsUser: 0
+     volumeMounts:
+      - mountPath: /usr/share/elasticsearch/data
+        name: elasticsearch-master
+
+
+

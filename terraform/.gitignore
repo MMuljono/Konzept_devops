@@ -1,0 +1,6 @@
+inventory/hosts.yaml
+admin.conf
+*.crt
+*.key
+.ssh
+kubespray
