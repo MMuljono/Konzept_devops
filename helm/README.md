@@ -11,7 +11,7 @@ Once the terraform and kubespray finish making the cluster we can start deploy o
 
 Deploying the monitoring (Elastic, Kibana, fluentd):
   > cd ./logging && kubectl create -f persistent-volume.yaml \
-  > helm install elasticsearch elastic/elasticsearch -f values.yaml \
+  > helm install elasticsearch elastic/elasticsearch -f values-elasticsearch.yaml \
   > helm install kibana elastic/kibana \
   > helm install fluent fluent/fluentd
 
